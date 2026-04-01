@@ -1,0 +1,131 @@
+/* Reset + base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #0f172a; /* dark blue/black */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 4rem;
+}
+
+/* App container */
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Task list */
+.tasks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* Each task item */
+.task-item {
+  display: flex;
+  align-items: center;
+  width: 50rem;
+  background-color: #1e293b;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  transition: 0.2s ease;
+  gap: 0.4rem;
+}
+
+.task-item:hover {
+  background-color: #334155;
+}
+
+/* Text */
+.task-item p {
+  font-size: 0.95rem;
+}
+
+/* Push status to right */
+.take-up-space {
+  flex-grow: 1;
+}
+
+/* Status styling */
+.task-item p:last-child {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  
+}
+
+.task-item p:last-child {
+  font-weight: bold;
+}
+
+.task-item p:last-child:contains("ongoing") {
+  color: #facc15;
+}
+
+button {
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #263753; /* blue */
+  color: white;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 10rem;
+  align-self: center;
+}
+
+/* Hover effect */
+button:hover {
+  background-color: #6a7792;
+  transform: scale(1.05);
+}
+
+/* Click effect */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Optional: spacing if you add multiple buttons */
+button + button {
+  margin-left: 0.5rem;
+}
+/* ================================== */
+.task-item button {
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #263753; /* blue */
+  color: white;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.task-item button:hover {
+  background-color: #6a7792;
+  transform: scale(1.05);
+}
+
+/* Click effect */
+.task-item button:active {
+  transform: scale(0.95);
+}
+
+/* Optional: spacing if you add multiple buttons */
+.task-item button + button {
+  margin-left: 0.5rem;
+}
